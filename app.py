@@ -15,4 +15,4 @@ st.title("Planogram Web")
 
 "The runner has jacked in"
 
-st.write(get_format_data())
+st.write(response)
