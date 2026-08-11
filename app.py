@@ -1,4 +1,4 @@
-import streamlit as 
+import streamlit as st
 import planogram
 
 st.title("Planogram Web")
