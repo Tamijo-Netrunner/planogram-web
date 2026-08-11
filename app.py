@@ -5,11 +5,12 @@ import requests
 def get_format_data():
   url = "https://api-preview.netrunnerdb.com/api/v3/public/card_pools/startup_02"
   response = requests.get(url)
-  if response.status_code == 200:
-    data = response.json()
-    return response.id
-  else:
-    return response.status_code
+  return response
+#  if response.status_code == 200:
+#    data = response.json()
+#    return response.id
+#  else:
+#    return response
 
 st.title("Planogram Web")
 
