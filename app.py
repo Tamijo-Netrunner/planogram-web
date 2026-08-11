@@ -9,7 +9,7 @@ def get_format_data():
     data = response.json()
     return response.id
   else:
-    return "Nope!"
+    return response.status_code
 
 st.title("Planogram Web")
 
