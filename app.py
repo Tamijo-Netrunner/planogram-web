@@ -8,7 +8,7 @@ def get_format_data():
   if response.status_code == 200:
     data = response.json()
     return id
-  else
+  else:
     return "Nope!"
 
 st.title("Planogram Web")
