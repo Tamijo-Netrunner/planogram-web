@@ -12,7 +12,7 @@ def search_card(searchInput):
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
   jsonResponse = response.json()
-  for item in items['data']:
+  for item in jsonResponse['data']:
     st.image(jsonResponse['attributes']['latest_printing_images']['nrdb_classic']['small'])
 
 #st.write(jsonResponse)
