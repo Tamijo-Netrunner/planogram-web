@@ -2,7 +2,7 @@ import streamlit as st
 import planogram
 import json
 import requests
-import reflex as rx
+from requests_html import html
 
 query = "gamble"
 
@@ -16,13 +16,8 @@ def search_card():
   else:
     return None
 
-# st.title("Planogram Web")
+st.title("Planogram Web")
 
-# "The runner has jacked in"
+"The runner has jacked in"
 
-# st.write(search_card())
-
-
-ui.label('The runner has jacked in')
-
-ui.run()
+st.write(search_card())
