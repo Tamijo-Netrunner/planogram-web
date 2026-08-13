@@ -2,7 +2,6 @@ import streamlit as st
 import planogram
 import json
 import requests
-from requests_html import html
 
 query = "gamble"
 
