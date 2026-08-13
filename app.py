@@ -2,7 +2,7 @@ import streamlit as st
 import planogram
 import json
 import requests
-from nicegui import ui
+import reflex as rx
 
 query = "gamble"
 
