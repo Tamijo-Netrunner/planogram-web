@@ -11,7 +11,7 @@ def search_card(searchInput):
       return
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
-  response
+  st.write(response.json())
 
 
 st.title("Planogram Web")
@@ -23,13 +23,3 @@ queryInputFromBox = st.text_input(label="Label", placeholder="Placeholder", help
 if st.button("Search"):
     queryInput = queryInputFromBox
     search_card(queryInput)
-
-
-url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=gamble"
-response = requests.get(url)
-st.write(response.json())
-
-#if response.status_code == 200:
-#  response.json()
-#else:
-#  st.warning("Error.")
