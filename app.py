@@ -12,7 +12,7 @@ st.title("Planogram Web")
 
 "The runner has jacked in"
 
-queryInputFromBox = st.text_input(label="Label", value="Value", help="Search for netrunner cards.")
+queryInputFromBox = st.text_input(label="Label", placeholder="Placeholder", value="Value", help="Search for netrunner cards.")
 
 if st.button("Search"):
     queryInput = queryInputFromBox
