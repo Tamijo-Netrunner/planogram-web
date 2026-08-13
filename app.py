@@ -5,9 +5,13 @@ import requests
 
 def search_card(searchInput):
   searchInput = searchInput.strip()
+  #make sure the input is right before continuing
+  if searchInput=="":
+      st.warning("The search query is empty.", icon="⚠️")
+      return
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
-  return url
+  url
 
 
 st.title("Planogram Web")
