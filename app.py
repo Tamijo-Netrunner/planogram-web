@@ -6,7 +6,7 @@ import requests
 def search_card(searchInput):
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
-  return response.json()
+  return url
 
 st.title("Planogram Web")
 
