@@ -12,8 +12,14 @@ def get_format_data():
 #  else:
 #    return response
 
+def search_card():
+  url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=gamble"
+  response = requests.get(url)
+  return response
+  
+
 st.title("Planogram Web")
 
 "The runner has jacked in"
 
-st.write(get_format_data())
+st.write(search_card())
