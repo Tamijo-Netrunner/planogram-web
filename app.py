@@ -4,9 +4,11 @@ import json
 import requests
 
 def search_card(searchInput):
+  searchInput = searchInput.strip()
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
   return url
+
 
 st.title("Planogram Web")
 
@@ -17,3 +19,12 @@ queryInputFromBox = st.text_input(label="Label", placeholder="Placeholder", help
 if st.button("Search"):
     queryInput = queryInputFromBox
     search_card(queryInput)
+
+
+
+
+
+
+
+
+
