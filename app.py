@@ -2,6 +2,7 @@ import streamlit as st
 import planogram
 import json
 import requests
+from nicegui import ui
 
 query = "gamble"
 
@@ -15,8 +16,13 @@ def search_card():
   else:
     return None
 
-st.title("Planogram Web")
+# st.title("Planogram Web")
 
-"The runner has jacked in"
+# "The runner has jacked in"
 
-st.write(search_card())
+# st.write(search_card())
+
+
+ui.label('The runner has jacked in')
+
+ui.run()
