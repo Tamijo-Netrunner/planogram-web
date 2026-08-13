@@ -12,7 +12,7 @@ def search_card():
   if response.status_code == 200:
     data =  response.json()
     return data
-  else
+  else:
     return None
 
 st.title("Planogram Web")
