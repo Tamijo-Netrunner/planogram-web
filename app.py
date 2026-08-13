@@ -13,7 +13,7 @@ def search_card(searchInput):
   response = requests.get(url)
   jsonResponse = response.json()
   for item in jsonResponse['data']:
-    st.image(jsonResponse['attributes']['latest_printing_images']['nrdb_classic']['small'])
+    st.image(item['attributes']['latest_printing_images']['nrdb_classic']['small'])
 
 #st.write(jsonResponse)
 
