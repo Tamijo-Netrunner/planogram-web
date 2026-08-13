@@ -1,5 +1,6 @@
 import streamlit as st
 import planogram
+import json
 import requests
 
 def get_format_data():
@@ -14,9 +15,8 @@ def get_format_data():
 
 def search_card():
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=gamble"
-  response = requests.get(url)
+  response = requests.json()
   return response
-  
 
 st.title("Planogram Web")
 
