@@ -3,11 +3,11 @@ import planogram
 import json
 import requests
 
-query = ""
+query = "gamble"
 
 def search_card():
   api_url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + query
-  response = response.json()
+  response = requests.get(url)
   return response
 
 st.title("Planogram Web")
