@@ -12,8 +12,10 @@ def search_card(searchInput):
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
   jsonResponse = response.json()
-  st.image(jsonResponse['data'][0]['attributes']['latest_printing_images']['nrdb_classic']['small'])
-  st.write(jsonResponse)
+  for item in items['data']:
+    st.image(jsonResponse['attributes']['latest_printing_images']['nrdb_classic']['small'])
+
+#st.write(jsonResponse)
 
 st.title("Planogram Web")
 
