@@ -26,4 +26,6 @@ if st.button("Search"):
 
 
 url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=gamble"
-st.json(url)
+response = requests.get(url)
+response
+response.json()
