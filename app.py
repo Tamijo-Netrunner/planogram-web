@@ -15,7 +15,7 @@ def get_format_data():
 
 def search_card():
   url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=gamble"
-  response = requests.json()
+  response = response.json()
   return response
 
 st.title("Planogram Web")
