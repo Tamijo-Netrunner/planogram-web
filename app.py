@@ -7,8 +7,7 @@ query = "gamble"
 
 def search_card():
   api_url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + query
-  response = response.json(api_url)
-  return response
+  return response.json(api_url)
 
 st.title("Planogram Web")
 
