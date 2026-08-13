@@ -3,20 +3,16 @@ import planogram
 import json
 import requests
 
-query = "gamble"
-
-def search_card():
-  url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + query
+def search_card(searchInput):
+  url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
   response = requests.get(url)
-
-  if response.status_code == 200:
-    data =  response.json()
-    return data["data"]["id"]
-  else:
-    return None
 
 st.title("Planogram Web")
 
 "The runner has jacked in"
 
-st.write(search_card())
+queryInputFromBox = st.text_input(label=" ", value="", help="Search for netrunner cards.")
+
+if st.button("Search"):
+    queryInput = queryInputFromBox
+    search_card(queryInput)
