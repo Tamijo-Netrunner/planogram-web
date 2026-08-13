@@ -29,5 +29,5 @@ url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=ga
 response = requests.get(url)
 if response.status_code == 200:
   response.json
-else
+else:
   st.warning("Error.")
