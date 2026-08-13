@@ -25,10 +25,6 @@ if st.button("Search"):
     search_card(queryInput)
 
 
-
-
-
-
-
-
-
+url = "https://api-preview.netrunnerdb.com/api/v3/public/cards?filter[search]=" + searchInput
+response = requests.get(url)
+response
