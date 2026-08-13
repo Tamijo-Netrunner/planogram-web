@@ -17,8 +17,8 @@ def search_card(searchInput):
   #cardImageUrl = response.json().data.0.attributes.latest_printing_images.nrdb_classic.small
   
   #response.json(data.0.attributes.latest_printing_images.nrdb_classic.small)
-  st.image(cardImageUrl)
-  st.write(response.json())
+#  st.image(cardImageUrl)
+  st.write(jsonResponse)
 
 st.title("Planogram Web")
 
